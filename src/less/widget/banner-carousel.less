@@ -1,0 +1,88 @@
+// 引入基本样式
+@import '../../public/less/index.less';
+
+@img:'../../images/public';
+
+.detail-banner{
+    img{
+      width: 100%;
+    }
+    .img_list{
+        overflow: hidden;
+        position: relative;
+        height: 260px;
+        ul{
+            width: 3500px;
+            position: absolute;
+            height: 260px;
+            left: 0px;
+        }
+        li{
+            float: left;
+            width: 700px;
+        }
+        img{
+            margin: 1px;
+            width: 698px;
+            height: 258px;
+        }
+    }
+    .btn_list ul{
+        position: absolute;
+        right: 20px;
+        bottom: 35px;
+    }
+    .btn_list li{
+        float: left;
+        margin-right: 10px; color: #999;
+        border: 1px solid #ccc;
+        img{
+            width: 30px;
+            height: 15px;
+            display: block;
+        }
+    }
+    .btn_list li:hover,.btn_list li.on{
+        cursor: pointer;
+        border: 1px solid #E204A4;
+    }
+    .toLeft, .toRight{
+        display: none;
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        top: 110px;
+        background: url("../../images/detail-image/zbbg_24.png") no-repeat 0 -150px;
+    }
+    .img_intro{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        .img_intro_bg{
+            background: #000;
+            opacity: .3;
+            z-index: 999;
+        }
+        .text{
+            padding: 5px 10px;
+            z-index: 1000;
+            color: #999;
+        }
+    }
+    .img_intro .img_intro_bg,.img_intro .text{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .toLeft{
+        left: -40px;
+    }
+    .toRight{
+        right: -40px;
+        background-position: -50px -150px;
+    }
+}

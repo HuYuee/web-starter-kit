@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>用友云</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="description" content="用友云 用友云市场" />
+    <meta name="keywords" content="用友云 用友云市场" />
+    <meta name="author" content="用友" />
+    <link rel="shortcut icon" href="./image/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/es5-shim/4.5.9/es5-sham.js"></script>
+    <script src="//cdn.bootcss.com/es5-shim/4.5.9/es5-shim.js"></script>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <![endif]-->
+    <script src="../../../vendor/modernizr/modernizr.min.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/widget/header.css">
+    <link rel="stylesheet" href="../../../vendor/purecss/grids.min.css">
+    <link rel="stylesheet" href="../../../vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="../../../public/font/iconfont.css">
+</head>
+
+<body>
+    <!--ws:公共头部导航-->
+    <div class="container-whole conheader">
+        <!-- header:top和bottom两部分  -->
+        <div class="container commonheader">
+            <div class="commonheader_top">
+                <div class="topleft pure-u-4-24" style="">
+                    <a href=".././../../cloud/src/html/index.html"><img src="../images/public/logo.png"></a>
+                </div>
+                <div class="topmiddle pure-u-12-24" style="text-align:center;">
+                    <ul class="nav nav-tabs" id="headTab">
+                        <li role="presentation" class="active"><a target="_blank" href="./">最新活动</a></li>
+                        <li role="presentation" id="product"><a target="_blank" href="./">产品<i class="uf uf-arrow-down"></i></a></li>
+                        <li role="presentation"><a target="_blank" href=".././../../market/src/html/index.html">云市场</a></li>
+                        <li role="presentation"><a target="_blank" href="./">方案<i class="uf uf-arrow-down"></i></a></li>
+                        <li role="presentation"><a target="_blank" href="./">客户</a></li>
+                        <li role="presentation"><a target="_blank" href="./">开发者中心</a></li>
+                        <li role="presentation"><a target="_blank" href="./">合作与生态<i class="uf uf-arrow-down"></i></a></li>
+                        <li role="presentation"><a target="_blank" href="./">支持<i class="uf uf-arrow-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="topright pure-u-6-24" style="float:right;">
+                    <div class="rightfont dn">
+                        <span class="btn-leave">退出</span>
+                    </div>
+                    <div class="rightfont">
+                        <span class="btn-register">注册</span>
+                    </div>
+                    <div class="leftfont">
+                        <span class="btn-logo">登录</span>
+                    </div>
+                </div>
+            </div>
+            <div class="commonheader_bottom">
+                <div class="bottomleft pure-u-4-24">
+                    <div class="market">
+                        <a href="./index.html"><span>云市场</span></a>
+                    </div>
+                    <div class="marketdesc">
+                        <a href="./index.html"><span>markert.yonyou.com</span></a>
+                    </div>
+                </div>
+                <div class="bottommiddle pure-u-12-24">
+                    <div class="group">
+                        <div class="inputgroup">
+                            <form action="./list.html" method="get">
+                                <input class="J_SearchText" type="text" name="keyword" placeholder="" />
+                                <input class="inputcontrol" value="搜索" type="submit" />
+                            </form>
+                        </div>
+                        <div class="contentlink J_SearchKey">
+                            <script id="J_SearchKeyTemplate" type="text/html">
+                                {{ each data as value index }}
+                                <span><a href="./list.html?keyword={{ value.name | searchFormat }}">{{value.name}}</a></span> {{ /each }}
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomright pure-u-7-24 headerbottom_service" style="float:right">
+                    <a class="supplier_link notlogin">
+                        <span class="rightservice">服务商认证</span>
+                    </a>
+                    <a class="manage_service" target="_blank" href="/tenant/manage">
+                        <span class="leftservice">管理我的服务</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 弹出头部的标签 -->
+        <div class="toptab-content dn" id="conproduct">
+        </div>
+    </div>
+    <div class="container-whole condropdown">
+        <ul class="container dropdown_container">
+            <li class="dropdown">
+                <div href="#" class="dropdown_main">
+                    <span>公有云应用</span>
+                    <i class="uf uf-arrow-down"></i>
+                </div>
+                <div class="dropdown_sub ">
+                    <ul class="navp1_ul">
+                        <li>
+                            <a class="navp1_left">营销</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">采购</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">协同办公</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">财务</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">人力</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">通讯</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">数据</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div href="#" class="dropdown_main">
+                    <span>平台服务</span>
+                    <i class="uf uf-arrow-down"></i>
+                </div>
+                <div class="dropdown_sub ">
+                    <ul class="navp1_ul">
+                        <li>
+                            <a class="navp1_left">开发平台</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">移动平台</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">云集成平台</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">云运维平台</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">商业应用基础支撑服务</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div href="#" class="dropdown_main">
+                    <span>软件移动应用</span>
+                    <i class="uf uf-arrow-down"></i>
+                </div>
+                <div class="dropdown_sub ">
+                    <ul class="navp1_ul">
+                        <li>
+                            <a class="navp1_left">NC移动应用</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div href="#" class="dropdown_main">
+                    <span>其他服务</span>
+                    <i class="uf uf-arrow-down"></i>
+                </div>
+                <div class="dropdown_sub ">
+                    <ul class="navp1_ul">
+                        <li>
+                            <a class="navp1_left">云解决方案</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">数据</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">安全</a>
+                        </li>
+                        <li>
+                            <a class="navp1_left">运营</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div href="#" class="dropdown_main">
+                    <span>品牌榜</span>
+                    <!--  <i class="uf uf-arrow-down"></i> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--we:公共头部导航-->
+    <!-- content -->
+    <!--  <h1>Detai</h1>
+
+    test -->
+    <!-- grid测试 -->
+    <!-- <div class="pure-g">
+    <div class="pure-u-1-3"><p>Thirds</p></div>
+    <div class="pure-u-1-3"><p>Thirds</p></div>
+    <div class="pure-u-1-3"><p>Thirds</p></div>
+</div> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- ws:返回顶部 -->
+    <div class="backtop">
+        <div class="backtop-icon">
+            <i class="icon uf uf-triangle-up"></i>
+        </div>
+    </div>
+    <!-- we返回顶部 -->
+    <!-- js -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+    <script src='../../../vendor/artTemplate/template.js'></script>
+    <script src='../../../vendor/velocity/velocity.min.js'></script>
+    <!-- 数据模拟 -->
+    <script src='../../../vendor/mockjs/mock.min.js'></script>
+    <script src="../js/header.js"></script>
+    <script src="../data/data.js"></script>
+    <script src="../../../public/js/util.js"></script>
+</body>
+
+</html>

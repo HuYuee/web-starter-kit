@@ -1,0 +1,40 @@
+<!-- ws: header的第二部分-->
+<div class="container-whole conheader">
+    <div class="container commonheader">
+        <div class="commonheader_bottom">
+            <div class="bottomleft pure-u-4-24">
+                <div class="market">
+                    <a href="/market"><span>云市场</span></a>
+                </div>
+                <div class="marketdesc">
+                    <a href="/market"><span>market.yonyou.com</span></a>
+                </div>
+            </div>
+            <div class="bottommiddle pure-u-12-24">
+                <div class="group">
+                    <div class="inputgroup">
+                        <div id="myform">
+                            <input class="J_SearchText" type="text" name="keyword" placeholder="" />
+                            <input class="inputcontrol" value="搜索" type="button" />
+                        </div>
+                    </div>
+                    <div class="contentlink J_SearchKey">
+                        <script id="J_SearchKeyTemplate" type="text/html">
+                            {{ each data as value index }}
+                            <span><a href="/list.html?keyword={{ value.name | searchFormat }}">{{value.name}}</a></span> {{ /each }}
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomright pure-u-7-24 headerbottom_service">
+                <a class="supplier_link notlogin">
+                    <span class="rightservice">服务商认证</span>
+                </a>
+                <a class="manage_service" href="/tenant/manage">
+                    <span class="leftservice">管理我的服务</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- we: header的第二部分-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>用友云</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="description" content="用友云" />
+    <meta name="keywords" content="用友云" />
+    <meta name="author" content="用友" />
+    <!--ws:引用公共样式 -->
+    {{{include '../widget/public_style'}}}
+    <!--we:引用公共样式 -->
+</head>
+
+<body class="protocol" style="visibility:hidden">
+    <!--ws:公共头部导航-->
+    {{{include '../widget/header'}}}
+    <!--we:公共头部导航-->
+    <!--ws:404内容-->
+    <div class="http_404">
+        <img src="../images/http_404/404.svg" alt="">
+        <h5>抱歉，您访问的页面不存在...</h5>
+        <p>您可能输入了错误的网址，或该页面已经删除</p>
+        <p>
+            系统将于<a id="404-count">10秒</a>后自动返回<a id="404-link" href="//market.yonyoucloud.com">云市场首页</a>
+        </p>
+    </div>
+
+    <!--we:404内容-->
+    <!-- ws: 公共底部 -->
+    {{{include '../widget/footer_fix'}}}
+    <!-- wd: 公共底部 -->
+    <!--ws: 公共Script -->
+    {{{include '../widget/public_script'}}}
+    <!--we: 公共Script -->
+    <script>
+    require(['http_404'], function() {});
+    </script>
+</body>
+
+</html>

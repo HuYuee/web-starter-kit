@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="279px" viewBox="0 0 640 279" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="36.5 0 73 59 0 59"></polygon>
+        <polygon id="path-3" points="36.5 0 73 59 0 59"></polygon>
+        <polygon id="path-5" points="46 0 92 74 0 74"></polygon>
+        <polygon id="path-7" points="46 0 92 74 0 74"></polygon>
+        <polygon id="path-9" points="76.5 0 153 123 0 123"></polygon>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-11">
+            <stop stop-color="#F3827C" offset="0%"></stop>
+            <stop stop-color="#F7A19A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="404" transform="translate(-598.000000, -174.000000)">
+            <g id="Group-7" transform="translate(598.000000, 174.000000)">
+                <g id="Group">
+                    <g id="Group-5" transform="translate(104.000000, 66.000000)">
+                        <g id="Rectangle-41-Copy-2" opacity="0.600000024" transform="translate(111.000000, 153.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#CBCBD1" xlink:href="#path-1"></use>
+                            <rect id="Rectangle-41" fill="#E9E9EC" mask="url(#mask-2)" x="36.5" y="-3.33962264" width="43.1363636" height="65.6792453"></rect>
+                        </g>
+                        <g id="Rectangle-41-Copy-3" opacity="0.699999988" transform="translate(378.000000, 153.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Mask" fill="#CBCBD1" xlink:href="#path-3"></use>
+                            <rect id="Rectangle-41" fill="#E9E9EC" mask="url(#mask-4)" x="36.5" y="-3.33962264" width="43.1363636" height="65.6792453"></rect>
+                        </g>
+                        <g id="Rectangle-41" opacity="0.900000036" transform="translate(36.000000, 138.000000)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Mask" fill="#CBCBD1" xlink:href="#path-5"></use>
+                            <rect fill="#E9E9EC" mask="url(#mask-6)" x="46" y="-4.18867925" width="54.3636364" height="82.3773585"></rect>
+                        </g>
+                        <g id="Rectangle-41-Copy-4" opacity="0.600000024" transform="translate(306.000000, 138.000000)">
+                            <mask id="mask-8" fill="white">
+                                <use xlink:href="#path-7"></use>
+                            </mask>
+                            <use id="Mask" fill="#CBCBD1" xlink:href="#path-7"></use>
+                            <rect id="Rectangle-41" fill="#E9E9EC" mask="url(#mask-8)" x="46" y="-4.18867925" width="54.3636364" height="82.3773585"></rect>
+                        </g>
+                        <g id="Rectangle-41-Copy" transform="translate(170.000000, 89.000000)">
+                            <mask id="mask-10" fill="white">
+                                <use xlink:href="#path-9"></use>
+                            </mask>
+                            <use id="Mask" fill="#CBCBD1" xlink:href="#path-9"></use>
+                            <rect id="Rectangle-41" fill="#E9E9EC" mask="url(#mask-10)" x="76.5" y="-6.96226415" width="90.4090909" height="136.924528"></rect>
+                        </g>
+                        <rect id="Rectangle-2" fill="#4D515A" x="288" y="94" width="12" height="118"></rect>
+                        <path d="M116.99768,211 C117.551246,211 118,211.443865 118,212 C118,212.552285 117.548958,213 116.99768,213 L1.00232026,213 C0.448754068,213 1.42108547e-14,212.556135 1.42108547e-14,212 C1.42108547e-14,211.447715 0.451042239,211 1.00232026,211 L116.99768,211 Z M191.000884,211 C191.552681,211 192,211.443865 192,212 C192,212.552285 191.554438,213 191.000884,213 L125.999116,213 C125.447319,213 125,212.556135 125,212 C125,211.447715 125.445562,211 125.999116,211 L191.000884,211 Z M467.995324,211 C468.550191,211 469,211.443865 469,212 C469,212.552285 468.562006,213 467.995324,213 L200.004676,213 C199.449809,213 199,212.556135 199,212 C199,211.447715 199.437994,211 200.004676,211 L467.995324,211 Z" id="Combined-Shape" fill="#666666"></path>
+                        <g id="Group-4" transform="translate(224.000000, 0.000000)">
+                            <polygon id="Polygon" fill="url(#linearGradient-11)" transform="translate(69.000000, 69.000000) rotate(30.000000) translate(-69.000000, -69.000000) " points="69 19 112.30127 44 112.30127 94 69 119 25.6987298 94 25.6987298 44"></polygon>
+                            <polygon id="Polygon-Copy" stroke="#FFFFFF" stroke-width="2" transform="translate(69.000000, 69.000000) rotate(30.000000) translate(-69.000000, -69.000000) " points="69 23.318276 108.561533 46.159138 108.561533 91.840862 69 114.681724 29.4384665 91.840862 29.4384665 46.159138"></polygon>
+                            <text id="404" font-family="LucidaGrande, Lucida Grande" font-size="36" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="35.8544922" y="81">404</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Group-2" opacity="0.501924819">
+                        <path d="M252.00217,66 L160.000175,66 L169.00228,66 C175.076153,66 180,70.923532 180,77 C180,83.0751322 175.073351,88 169.00228,88 L160.000175,88 L252.00217,88 L221.002411,88 C214.925947,88 210,83.076468 210,77 C210,70.9248678 214.927749,66 221.002411,66 L252.00217,66 Z M138,44 L10.9980704,44 C4.92782824,44 0,48.9248678 0,55 C0,61.076468 4.92400384,66 10.9980704,66 L138,66 L265.00193,66 C271.072172,66 276,61.0751322 276,55 C276,48.923532 271.075996,44 265.00193,44 L138,44 Z M171.00217,22 L79.0001754,22 L88.0022803,22 C94.0761532,22 99,26.923532 99,33 C99,39.0751322 94.073351,44 88.0022803,44 L79.0001754,44 L171.00217,44 L140.002411,44 C133.925947,44 129,39.076468 129,33 C129,26.9248678 133.927749,22 140.002411,22 L171.00217,22 Z M41,11 C41,4.92486775 45.9278282,0 51.9980704,0 L184.00193,0 C190.075996,0 195,4.923532 195,11 C195,17.0751322 190.072172,22 184.00193,22 L51.9980704,22 C45.9240038,22 41,17.076468 41,11 Z M81,99 C81,92.9248678 85.9278282,88 91.9980704,88 L224.00193,88 C230.075996,88 235,92.923532 235,99 C235,105.075132 230.072172,110 224.00193,110 L91.9980704,110 C85.9240038,110 81,105.076468 81,99 Z" id="Combined-Shape" fill="#DBDBE0"></path>
+                        <circle id="Oval" fill="#E2E2E2" cx="224" cy="11" r="11"></circle>
+                    </g>
+                    <g id="Group-2-Copy" opacity="0.501924819" transform="translate(506.000000, 44.000000)" fill="#E2E2E2">
+                        <path d="M129.00217,22 L97.0024109,22 C90.9277488,22 86,26.9248678 86,33 C86,39.076468 90.9259471,44 97.0024109,44 L129.00217,44 L40.0001754,44 L51.0022803,44 C57.073351,44 62,39.0751322 62,33 C62,26.923532 57.0761532,22 51.0022803,22 L40.0001754,22 L129.00217,22 Z M32,11 C32,4.92486775 36.919672,0 43.0005666,0 L122.999433,0 C129.074879,0 134,4.923532 134,11 C134,17.0751322 129.080328,22 122.999433,22 L43.0005666,22 C36.9251214,22 32,17.076468 32,11 Z M0,55 C0,48.9248678 4.92812922,44 11.0019623,44 L101.998038,44 C108.074254,44 113,48.923532 113,55 C113,61.0751322 108.071871,66 101.998038,66 L11.0019623,66 C4.92574629,66 0,61.076468 0,55 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+                <circle id="Oval-2" fill="#DBDBE0" opacity="0.501924819" cx="417" cy="44" r="11"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

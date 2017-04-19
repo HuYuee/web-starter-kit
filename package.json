@@ -1,0 +1,38 @@
+{
+  "name": "web-starter-kit",
+  "version": "1.0.0",
+  "description": "一个基于require+gulp的前后端分离的脚手架工具",
+  "main": "index.js",
+  "scripts": {
+      "del": "gulp del",
+      "build": "gulp cdn",
+      "live": "gulp",
+      "move": "node bin/convert && cd bin && node push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuYuee/web-starter-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuYuee/web-starter-kit/issues"
+  },
+  "homepage": "https://github.com/HuYuee/web-starter-kit#readme",
+  "devDependencies": {
+    "art-template": "^3.1.3",
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "fs-extra": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- ws: 引入公共样式 -->
+    {{{include '../widget/public_style'}}}
+    <!-- we: 引入公共样式 -->
+
+</head>
+
+<body style="visibility:hidden;">
+
+  <!-- ws: 引入公共头部-->
+  {{{include '../widget/header'}}}
+  <!-- we: 引入公共头部-->
+
+    <!-- ws : 内容区域-->
+  <input type="hidden" id="cmsurl" value="${servername}">
+  <div id="market-product_list" class="market-product_list">
+      <div class="y-row clearfix m-prode-list y-clear">
+          <div class="search">
+              <dl class="ul-class y-clear y-hide">
+                  <div class="class-list y-left J-pro-class">
+                      <!--<div class="item">
+                          <span class="title">全部分类</span>
+                      </div>-->
+                      <!-- <div class="item">
+                           <span class="title padding-right-5">
+                           <span>软件市场</span>
+                               <i class="uf uf-triangle-down  font-size-10"></i>
+                           </span>
+                   </div>-->
+                  </div>
+              </dl>
+              <dl class="product-class  y-clear">
+                  <dt class="m-pro-item-bgColor padding-hor-30">
+                      <span>产品分类</span><span> :</span>
+                  </dt>
+                  <dd class="firstLevel">
+                  </dd>
+              </dl>
+              <dl class="ul-list y-clear">
+                  <dd>
+                      <div class="m-pro-item open">
+                          <span class="title m-pro-item-bgColor padding-hor-30"><span>价格</span><span> : </span></span>
+                          <div class="limit-height y-left">
+                              <span class="btn chose-active" value="全部">全部</span>
+                              <span class="btn ">免费</span>
+                              <span class="btn ">1-98</span>
+                              <span class="btn ">99-198</span>
+                              <span class="btn ">199-1998</span>
+                              <span class="btn ">1999-2998</span>
+                              <span class="btn ">2998以上</span>
+                          </div>
+                          <span></span><span class="y-clear"></span>
+                      </div>
+                  </dd>
+                  <dd>
+                      <div class="m-pro-item open">
+                          <span class="title m-pro-item-bgColor padding-hor-30"><span>交付方式</span><span> : </span></span>
+                          <div class="limit-height y-left">
+                              <span class="btn chose-active" value="全部">全部</span>
+                              <span class="btn " value="3">API服务</span>
+                              <span class="btn " value="4">下载</span>
+                              <span class="btn " value="2">授权</span>
+                              <span class="btn " value="1">人工服务</span>
+                              <span class="btn " value="0">SaaS</span>
+                          </div>
+                          <span></span><span class="y-clear"></span>
+                      </div>
+                  </dd>
+                  <dd>
+                      <div class="m-pro-item open">
+                          <span class="title m-pro-item-bgColor padding-hor-30"><span>操作系统</span><span> : </span></span>
+                          <div class="limit-height y-left">
+                              <span class="btn chose-active" value="全部">全部</span>
+                              <span class="btn ">Windows</span>
+                              <span class="btn ">Linux</span>
+                              <span class="btn ">IOS</span>
+                              <span class="btn ">OSX</span>
+                              <span class="btn ">Android</span>
+                          </div>
+                          <span></span><span class="y-clear"></span>
+                      </div>
+                  </dd>
+                  <dd>
+                      <div class="m-pro-item open">
+                          <span class="title m-pro-item-bgColor padding-hor-30"><span>客户群体</span><span> : </span></span>
+                          <div class="limit-height y-left">
+                              <span class="btn chose-active" value="全部">全部</span>
+                              <span class="btn " value="0">大中型企业</span>
+                              <span class="btn " value="1">小微型企业</span>
+                              <span class="btn " value="2">团队</span>
+                              <span class="btn " value="3">不限</span>
+                          </div>
+                          <span></span><span class="y-clear"></span>
+                      </div>
+                  </dd>
+              </dl>
+          </div>
+          <div class="quick-sort y-clear">
+              <ul>
+                  <li class="title">
+                        <span class="rel">
+                       <a class="product-default"> 默认排序 </a>
+                       <i class="uf uf-triangle-up rel-icon-up font-size-10"></i>
+                       <i class="uf uf-triangle-down rel-icon-down font-size-10"></i>
+                   </span>
+                  </li>
+                  <li>
+                        <span class="y-left">
+                        <span class="rel">
+                           <a class="product-line-time">上架时间</a>
+                           <i class="uf uf-triangle-up rel-icon-up font-size-10"></i>
+                           <i class="uf uf-triangle-down rel-icon-down font-size-10"></i>
+                        </span>
+                        </span>
+                  </li>
+                  <li>
+                        <span class="y-left">
+                          <span class="rel">
+                           <a class="product-price">价格</a>
+                               <i class="uf uf-triangle-up rel-icon-up font-size-10 rel-icon-price-left"></i>
+                               <i class="uf uf-triangle-down rel-icon-down font-size-10 rel-icon-price-left"></i>
+                            </span>
+                        </span>
+                  </li>
+                  <div class="y-right y-mr-5 totalRecords">
+                      <span class="data-bg-color">为您找到 </span>
+                      <span class="data-bg-color product-Count"></span>
+                      <span class="data-bg-color">条结果</span>
+                  </div>
+              </ul>
+          </div>
+          <div class="advertisement fix"></div>
+          <div class="product-list  m-bg-white">
+              <ul class="product-ul">
+              </ul>
+              <ul class="pages-ul fix">
+                  <ul class="ant-pagination fix" unselectable="unselectable" id="pagecount">
+                      <!--  <li title="上一页" class="ant-pagination-disabled ant-pagination-prev">
+                        <a>上一页</a>
+                    </li>
+                    <li title="第一页" class="ant-pagination-item ant-pagination-item-1 ant-pagination-item-active">
+                        <a>1</a>
+                    </li>
+                    <li title="2" class="ant-pagination-item ant-pagination-item-2">
+                        <a>2</a>
+                    </li>
+                    <li title="3" class="ant-pagination-item ant-pagination-item-3">
+                        <a>3</a>
+                    </li>
+                    <li title="4" class="ant-pagination-item ant-pagination-item-4">
+                        <a>4</a>
+                    </li>
+                    <li title="5" class="ant-pagination-item ant-pagination-item-5">
+                        <a>5</a>
+                    </li>
+                    <li title="向后 5 页" class="ant-pagination-jump-next">
+                        <a>
+                            <i class="uf   uf-3dot-h"></i>
+                        </a>
+                    </li>
+                    <li title="最后一页: 9" class="ant-pagination-item ant-pagination-item-9">
+                        <a>9</a>
+                    </li>
+                    <li title="下一页" class="ant-pagination-next">
+                        <a>
+                        下一页
+                    </a>
+                    </li>-->
+                  </ul>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- we : 内容区域-->
+
+    <!-- ws:引入公共footer -->
+    {{{include '../widget/footer_fix'}}}
+    <!-- we:引入公共footer -->
+  <!-- start 使用模板引擎渲染列表-->
+  <script id="productUl" type="text/html">
+      {{each content as product}}
+      <li>
+          <div class="view-img y-left">
+              <a target="_blank" href="/market/product/details/{{product.productId}}">
+                  <img src="{{product.logo}}">
+              </a>
+          </div>
+          <div class="view-info y-left">
+              <h1>
+                  <a target="_blank" href="/market/product/details/{{product.productId}}">
+                      {{product.productName}}
+                  </a>
+              </h1>
+              <div class="line cfg margin-top-4">
+                  <span>服务商：</span>
+                  <a target="_blank" class='product-head_company' href="/market/shop/{{product.isvId}}">{{product.isvName}}</a>
+              </div>
+              <div class="line cfg mt6">
+                  {{if ( product.brief !=null) }}
+                  <p> {{product.brief}}</p>
+                  {{/if}}
+              </div>
+          </div>
+          <div class="view-desc y-left" >
+              <div class="line cfg ">
+                  <span >支付方式：</span>
+                  {{if ( product.deliverMode =="0") }}
+                      <span>SaaS</span>
+                  {{/if}}
+                  {{if ( product.deliverMode =="1") }}
+                     <span>人工服务</span>
+                  {{/if}}
+                  {{if ( product.deliverMode =="2") }}
+                       <span>授权</span>
+                  {{/if}}
+                  {{if ( product.deliverMode =="3") }}
+                      <span>API服务</span>
+                  {{/if}}
+                  {{if ( product.deliverMode =="4") }}
+                      <span>下载</span>
+                  {{/if}}
+
+              </div>
+              <div class="line info mt6" >
+                  <span >版本：</span>
+                  {{if ( product.versionNum !=null) }}
+                  <span>{{product.versionNum}}</span>
+                  {{/if}}
+              </div>
+              <div class="line info mt6" >
+                  <span > 客户群体 ：  </span>
+                  {{if ( product.customerGroupName !=null) }}
+                  <span>{{product.customerGroupName}}</span>
+                  {{/if}}
+              </div>
+              <div class="line cfg mt6" >
+                  <span >
+                    <span >关联的用友产品：</span>
+                      {{if ( product.relativeProductName !=null) }}
+                            <span>{{product.relativeProductName}}</span>
+                      {{/if}}
+                      {{if ( product.relativeProductName ==null) }}
+                            <!-- <span >U商城</span>-->
+                      {{/if}}
+                  </span>
+              </div>
+          </div>
+          <div class="view-price y-left">
+              <div class="title">
+                    <span>
+                         {{if (product.specification.length > 0) }}
+                               {{if (product.specification[0].saleMode=="3") }}
+                                    <span class="priceColor padding-left-30">面议</span>
+                               {{/if}}
+                                {{if (product.specification[0].saleMode!=="3") }}
+                                            <i class="priceColor">￥</i>
+                                           <span class="priceColor">{{product.lowestPrice}}</span>
+                                           <!--  <i>/月</i>-->
+                                {{/if}}
+                        {{/if}}
+                    </span>
+              </div>
+          </div>
+          <div class="y-clear"></div>
+          {{if (product.labelList.length > 0) }}
+          <div class="product-tag y-clear ">
+              <div class='m-line y-mt3 y-mb3 '></div>
+          </div>
+          {{/if}}
+          <div class='margin-left-108'>
+                 <span>
+                    {{if (product.labelList.length > 0) }}
+                      {{each product.labelList as lalel}}
+                          {{if lalel!= null}}
+                                <span class="tagBtn btn" data-label="{{lalel.labelId}}">{{lalel.labelName}}</span>
+                          {{/if}}
+                       {{/each}}
+                     {{/if}}
+                 </span>
+          </div>
+      </li>
+      {{/each}}
+  </script>
+  <!-- end 使用模板引擎渲染列表-->
+  <!-- start 使用模板引擎渲染广告位-->
+  <script id="adverPro" type="text/html">
+      {{each res as data}}
+          {{if ( data.p_url !=null) }}
+              <a href="{{data.p_url}}" target="_blank" class="db">
+                  <div class="advertisement__item">
+                      <i class="advertisement__flag">推荐</i>
+                      <div class="advertisement__item&#45;&#45;top fix">
+                          <div class="advertisement__item__icon">
+                              {{if ( data.l_url !=null) }}
+                              <img src="{{data.l_url}}" width="80px">
+                              {{/if}}
+                          </div>
+                          <div class="advertisement__item__text">
+                              <div class="advertisement__item__text__title">
+                                  {{if ( data.c_name !=null) }}
+                                  {{data.c_name}}
+                                  {{/if}}
+                              </div>
+                              <div class="advertisement__item__text__sub">
+                                  {{if ( data.c_language !=null) }}
+                                  {{data.c_language}}
+                                  {{/if}}
+                              </div>
+                              <div class="advertisement__item__text__price">
+                                  <span class="advertisement__item__text__price&#45;&#45;ren">¥</span>
+                                  <span class="advertisement__item__text__price&#45;&#45;num">
+                                      {{if ( data.c_price !=null) }}
+                                          {{data.c_price}}
+                                      {{/if}}
+                                  </span>
+                                  <span class="advertisement__item__text__price&#45;&#45;month">
+                                       {{if ( data.c_unit !=null&&data.c_unit !="") }}
+                                          <i>/{{data.c_unit}}</i>
+                                      {{/if}}
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="advertisement__item&#45;&#45;bottom font-hidden font-color-bottom">
+                          {{if ( data.c_desc !=null) }}
+                             {{data.c_desc}}
+                          {{/if}}
+                      </div>
+                  </div>
+              </a>
+          {{/if}}
+      {{/each}}
+  </script>
+  <!-- end 使用模板引擎渲染广告位-->
+  <!--ws: 公共Script -->
+  {{{include '../widget/public_script'}}}
+  <!--we: 公共Script -->
+  <script>
+      require( ['list'], function() {
+      });
+  </script>
+
+</body>
+
+</html>

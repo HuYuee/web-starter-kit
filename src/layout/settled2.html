@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- ws: 引入公共样式 -->
+    {{{include '../widget/public_style'}}}
+    <!-- we: 引入公共样式 -->
+
+</head>
+
+<body style="visibility:hidden;">
+    <!-- ws: 引入公共头部-->
+    {{{include '../widget/header'}}}
+    <!-- we: 引入公共头部-->
+      <!-- ws : 内容区域-->
+        <h3>申请入驻合作</h3>
+    </div>-->
+                    <div class="authentication_tit">
+                        <div class="authentication_titcon settled_tit">
+                            <h3>申请入驻合作</h3>
+                            <span style="
+                font-size: 14px;
+                color: rgb(221, 55, 48);
+            ">审核未通过，请重新填写</span>
+                        </div>
+                        <div class="authentication_titcon authentication_complant">
+                            <p class="text1 p1">您已经申请，请在耐心等待审合结果！</p>
+                            <!-- <p><em class="timeover" id="timeOver">5</em>秒后页面自动跳转到管理页面！</p>
+            <p>可点击<a href="/tenant/manage#/account/tenantmanage"  id="linkurl">链接</a>跳转至管理页面</p>-->
+                        </div>
+                        <em class="authentication_tips"></em>
+                    </div>
+                    <div class="com_right register2 register3" id="register3">
+                        <div class="mic">
+                            <div class="yz rowm"><span class="m_left">名称:</span><i class="must">*</i>
+                                <input id="" maxlength="35" type="text" placeholder="名称" class="isv_name"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">银行账号:</span><i class="must">*</i>
+                                <input id="" maxlength="35" type="text" placeholder="银行账号" class="bank_username"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">银行开户支行:</span><i class="must">*</i>
+                                <input id="" maxlength="35" type="text" placeholder="银行开户支行" class="bank_branchname"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">银行开户名:</span><i class="must">*</i>
+                                <input id="" maxlength="35" type="text" placeholder="银行开户名" class="bank_name"><em class="tips"></em></div>
+                            <div class=" rowm address tenant_area"><span class="m_left">所在地区：</span><i class="must">*</i>
+                                <div class="select_inall firstchild">
+                                    <select vlaue="" name="P1" class="areap1 tenantArea1"></select><i class="iconfont icon-arrow-down select_down"></i></div>
+                                <div class="select_inall">
+                                    <select vlaue="" name="C1" class="areac1"></select><i class="iconfont icon-arrow-down select_down"></i></div>
+                                <div class="select_inall">
+                                    <select vlaue="" name="Q1" class="areaq1"></select><i class="iconfont icon-arrow-down select_down"></i></div>
+                                <em class="tips"></em>
+                            </div>
+                            <div class="yz rowm"><span class="m_left">公司网站:</span><i class="must">*</i>
+                                <input maxlength="35" type="text" placeholder="公司网站" class="tenant_web"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">联络人:</span><i class="must">*</i>
+                                <input maxlength="35" type="text" placeholder="联络人" class="tenant_contactname"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">手机号:</span><i class="must">*</i>
+                                <input maxlength="11" type="text" placeholder="手机号" class="tenant_phone"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">邮箱:</span><i class="must">*</i>
+                                <input maxlength="35" type="text" placeholder="邮箱" class="tenant_email"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">主营业务描述:</span><i class="must">*</i>
+                                <input type="text" placeholder="主营业务描述" class="tenant_detail"><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">简介:</span><i class="must">*</i>
+                                <textarea class="settled_brief isv_brief" type="text"></textarea><em class="tips"></em></div>
+                            <div class="yz rowm"><span class="m_left">上传logo:</span>
+                                <div class="settled_img settled_img2">
+                                    <img class="img-responsive tenant_img2" style=" width: 100%" />
+                                </div>
+                                <div class="settled_btn">
+                                    <span class="settled_btn_t settled_btn_t2">上传图标</span>
+                                    <span class="settled_btn_b">gif，jpg，jpeg,bmp，png格式图片，小于200K</span>
+                                </div>
+                            </div>
+                            <div class="yz rowm"><span class="m_left">上传营业执照副本:</span>
+                                <div class="settled_img settled_img1">
+                                    <img class="img-responsive tenant_img1" style=" width: 100%" />
+                                </div>
+                                <div class="settled_btn">
+                                    <span class="settled_btn_t settled_btn_t1">上传图标</span>
+                                    <span class="settled_btn_b">gif，jpg，jpeg,bmp，png格式图片，小于200K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nextbtn r3btn" id="auth_r3btn">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    </div>
+
+    <!-- ws:引入公共footer -->
+    {{{include '../widget/footer_fix'}}}
+    <!-- we:引入公共footer -->
+
+    <!--ws: 公共Script -->
+    {{{include '../widget/public_script'}}}
+    <!--we: 公共Script -->
+    <script>
+      require( ['settled'], function() {
+          new PCAS("P1","C1","Q1");
+      });
+    </script>
+</body>
+
+</html>

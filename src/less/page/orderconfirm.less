@@ -1,0 +1,279 @@
+// 引入基本样式
+@import '../../public/less/index.less';
+
+// 引入组件样式
+@import '../widget/backtop.less';
+@import '../widget/header.less';
+@import '../widget/footer.less';
+
+/*orderconfirm*/
+.plr20{ padding: 0 20px;}
+.order_confirm_box{ width: 1200px; margin: 20px auto 20px; box-sizing: border-box;}
+.order-confirm-s1{ width: 100%; overflow: hidden;}
+.order-confirm-title{ float: left; font-size: 23px; color: #484443;}
+.order-confirm-step{ width: 670px; float: right;}
+.order-confirm-step li{ height: 30px; float: left; position: relative; background-color: #FFF; font-size: 14px; text-align: center; line-height: 30px;}
+.order-confirm-step li p{ line-height: 30px;}
+.order-confirm-step li:nth-of-type(1){ width: 221px; background: url(../../images/orderconfirm/step1.png) no-repeat;}
+.order-confirm-step li:nth-of-type(2){ width: 223px; background: url(../../images/orderconfirm/step2.png) no-repeat; margin-left: -8px;}
+.order-confirm-step li:nth-of-type(3){ width: 237px; background: url(../../images/orderconfirm/step3.png) no-repeat; margin-left: -8px;}
+.order-confirm-step li.cur{ color: #fff;}
+.order-confirm-step li.cur:nth-of-type(1){ background: url(../../images/orderconfirm/step1.png) no-repeat;}
+.order-confirm-step li.cur:nth-of-type(2){ background: url(../../images/orderconfirm/step2_1.png) no-repeat;}
+.order-confirm-step li.cur:nth-of-type(3){ background: url(../../images/orderconfirm/step3_1.png) no-repeat;}
+
+.order-confirm-order-detail{ overflow: hidden; margin-top: 10px; padding: 0 0 20px; background-color: #fff;}
+.table{ width: 100%; border-top: 1px solid #E0E0E0; box-sizing: border-box; font-size: 14px;}
+.table tr th{ background:#f0f0f0; border:1px solid #e9e9e9; height:38px;font-weight: bold;}
+.table tr td{border-bottom: 1px solid #e9e9e9; height: 66px; padding: 8px 10px; box-sizing: border-box; vertical-align: middle; text-align: center;}
+.c_ff6602{ color: #ff6602; }
+.table .align_left{ text-align: left !important;}
+.order-notes{ width: 100%; margin-top: 30px;}
+.order-confirm-text{ width: 80px; float: left; line-height: 30px;}
+.order-confirm-text-box{ margin-left: 80px; overflow: hidden;}
+.order-confirm-textarea{ width: 100%; padding:0 10px; border: 1px solid #dedede; height: 30px; box-sizing: border-box;}
+.order-bill-title{ overflow: hidden; margin-top: 20px;}
+.order-bill-choose{ overflow: hidden; margin-left: 80px; padding-left: 10px; line-height: 30px;}
+.ordre-bill-con{ width: 100%; overflow: hidden; margin-top: 20px;}
+.ordre-bill-con-ul li{ width: 100%; margin-top: 10px; overflow: hidden;}
+.order-bill-text{ width: 100px; text-align: right; line-height: 30px; float: left; font-size: 14px;}
+.bill-text{ float: left; margin-left: 10px; width: 30%; float: left; height: 30px; line-height: 30px; box-sizing: border-box; padding: 0 8px; border: 1px solid #dedede;}
+.ordre-bill-con-ul .errortips{ float: left; line-height: 30px; padding-left: 15px; color: #ff0000;}
+.go-pay-box{ width: 100%; overflow: hidden; margin-top: 20px; position: relative;}
+.order-confirm-go-pay-btn{ .red-btn-hover();float: right; display: block; width: 117px; height: 30px; line-height: 30px; background-color: #e03835; color: #FFF; font-size: 14px; cursor: pointer; text-align: center;}
+.order-confirm-go-pay-btn.hui{ background-color: #f0f0f0; color: #424242;}
+.gopay-mask-btn{ position: absolute;
+    right: 0;
+    top: 0;
+    width: 117px;
+    height: 30px;
+    display: block;
+    background-color: #fff;
+    opacity: .2;
+    display: none;
+}
+.gopay-agreement{
+    width: 100%;
+    overflow: hidden;
+    line-height: 30px;
+    .gopay-agreement-span{
+        float: right;
+    }
+    input[type="checkbox"]{
+        margin-right: 5px;
+    }
+    a{
+        color: #0088CC;
+    }
+
+}
+.none{ display: none;}
+.red{ color: #ff0000;}
+.order-status-alert-box{ position: absolute; z-index: 100; top: 0; left: 0; width: 100%; display: none;}
+.order-status-alert-bg{ position: absolute; z-index: 101; top: 0; left: 0; width: 100%; background-color: #000000; opacity: .45;}
+.order-status-detail{ position: absolute; top: 50%; margin-top: -100px;  left: 50%; margin-left: -250px; z-index: 102; width: 500px; height: 200px; background-color: #fff; border: 10px solid #dedede; border-radius: 10px;}
+.order-alert-close{ position: absolute; top: -25px; right: -25px; width: 30px; height: 30px; line-height: 28px; background-color: #fff; border:1px solid #ccc; border-radius: 50%; text-align: center; font-size: 16px; font-weight: bold; transition: all 0.2s linear; cursor: pointer; color: #333;}
+.order-alert-close:hover{ background-color: #CCCCCC;}
+.order-status-title{ width: 100%; margin-top: 60px; text-align: center; font-size: 16px;}
+.order-status-confirm{ width: 100%; margin-top: 20px; text-align: center;}
+.order-status-confirm .order-status-btn{ display: inline-block; margin: 0 10px; padding: 0 20px; line-height: 30px; height: 30px; border-radius: 5px;}
+.order-status-confirm .cheng_btn{ background-color: #FF6600; color: #FFF;}
+.order-status-confirm .hui_btn{ background-color: #ccc; color: #333;}
+.order-bill-invoicetype-box{ float: left; line-height: 30px;}
+.order-bill-invoicetype{ margin-left: 10px;}
+/*detail order back*/
+.order_confirm_box_detail .order-notes,.order_confirm_box_detail .order-bill-title,.order_confirm_box_detail .go-pay-box,.order_confirm_box_detail .order-confirm-orderPrice{ display: none;}
+.order-back-number{ width: 100%; line-height: 30px; margin-top: 10px; overflow: hidden; display: none;}
+.order-back-number.block{display: block;}
+.order-detail-in{ color: #FF6600;}
+
+.order-confirm-orderPrice{
+    text-align: right;
+    padding: 0 10px;
+
+    a{
+        color: #0088CC;
+    }
+    .order-confirm-price-span1{
+        padding-left: 30px;
+    }
+    .c_ff6602{ font-size: 27px; padding-left: 20px;}
+}
+/*order complete*/
+.order-complete-con{
+    overflow: hidden;
+    height: 385px;
+    .order-complete-nr{
+        display: inline-block;
+        position: relative;
+        left: 40%;
+    }
+    .order-complete-text{
+        span{
+            display: inline-block;
+            margin-left: -50px;
+            padding-left: 80px;
+            margin-top: 95px;
+            line-height: 50px;
+            background: url(../../images/orderconfirm/success.png) left no-repeat;
+            font-size: 21px;
+            color: #FF6602;
+        }
+    }
+    .order-complete-text.failed{
+        span{
+            background: url(../../images/orderconfirm/fail.png) left no-repeat;
+            font-size: 21px;
+            color: #dd3730;
+        }
+    }
+    .order-complete-mes,.order-complete-tips,.back-index{
+        padding-left: 30px;
+    }
+    .order-complete-mes1{ line-height: 24px;}
+    .order-complete-mes,.order-complete-tips{
+        a{
+            color: #0088CC;
+        }
+    }
+    .order-c-price{ color: #FF6602; font-size: 17px;}
+    .order-complete-tips{ margin-top: 5px; line-height: 24px; color: #666;}
+    .back-index{
+        margin-top: 20px;
+        a.back-index-a{
+            .red-btn-hover();
+            display: block;
+            width: 130px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #DD3730;
+            color: #FFF;
+        }
+        a.go-pay-a{
+            .btn-hover();
+            display: block;
+            float: left;
+            width: 130px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #DD3730;
+            color: #DD3730;
+        }
+        a.back-index-a-s1{
+            line-height: 30px;
+            float: left;
+            margin-left: 30px;
+            padding-right: 10px;
+            color: #0088CC;
+            background: url(../../images/orderconfirm/back.png) right no-repeat;
+        }
+    }
+}
+
+.order-complete-text .loading{
+    padding-left: 10px;
+    display: inline;
+}
+.order-complete-text .loading em{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: #FF6602;
+    -webkit-animation: load 1.04s ease infinite;
+}
+.order-complete-text .loading em:last-child{
+    margin-right: 0px;
+}
+@-webkit-keyframes load{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.order-complete-text .loading em:nth-child(1){
+    -webkit-animation-delay:0.2s;
+}
+.order-complete-text .loading em:nth-child(2){
+    -webkit-animation-delay:0.4s;
+}
+.order-complete-text .loading em:nth-child(3){
+    -webkit-animation-delay:0.6s;
+}
+.order-complete-text .loading em:nth-child(4){
+    -webkit-animation-delay:0.8s;
+}
+.order-complete-text .loading em:nth-child(5){
+    -webkit-animation-delay:1s;
+}
+
+.subBtnMaskLoading{ width: 117px; height: 30px; text-align: center; background-color: #000000; opacity: .5; position: absolute; right: 0;}
+.loading-w{
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    /*border:1px solid #CCCCCC;*/
+    -webkit-animation: turn 2s linear infinite;
+}
+.loading-w span{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #CCCCCC;
+    position: absolute;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    animation: turn 2s linear infinite;
+
+}
+@-webkit-keyframes turn{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes turn {
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes turn {
+  0%{
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes turn {
+  0%{
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes turn {
+  0%{
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+.order-confirm-textarea-tjm{ width: 200px; padding: 0 10px;}

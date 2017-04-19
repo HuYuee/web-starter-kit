@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ws: 引入公共样式 -->
+    {{{include '../widget/public_style'}}}
+    <!-- we: 引入公共样式 -->
+
+</head>
+<body style="visibility:hidden;">
+
+  <!-- ws: 引入公共头部-->
+  {{{include '../widget/header'}}}
+  <!-- we: 引入公共头部-->
+
+  <!--ws: 内容区域  -->
+  <div class="container-whole condropdown">
+          <div class="container  dropdown_container">
+              <div class="sttled2">
+                  <div class="sttled2_title">
+                      <span>服务商认证申请</span>
+                      <i class="cl cl-verify"></i>
+                      <div  class="app_bottom_shenhew">
+                          <span>审核未通过</span>
+                          <i class="app_approveReason_i">？</i>
+                          <div class="app_approveReason"></div>
+                      </div>
+                      <div class="settled2_btn settled2_btntj">提交</div>
+
+                      <div class="settled2_btn settled2_btnbc">保存</div>
+                  </div>
+                  <div class="sttled2_row">
+                      <h3>服务商信息<i></i></h3>
+                      <div class="sttled2_left">
+                          <div class="settled_img settled_img2" >
+                              <img class="img-responsive tenant_img2"  />
+                          </div>
+                          <div class="settled_btn">
+                              <span class="settled_btn_t settled_btn_t2">上传企业logo</span>
+                              <p class="settled_btn_b">建议尺寸: 4:3 尺寸不小于200×150</p>
+                              <p class="settled_btn_b">图片格式: jpg png</p>
+                              <p class="settled_btn_b">图片大小: 不大于5m</p>
+                          </div>
+                      </div>
+                      <div class="sttled2_right">
+                          <ul>
+                              <li><span>企业名称</span><input class="isv_name" type="text" placeholder="企业名称"></li>
+                              <li>&nbsp;</li>
+                              <li><span>入驻市场</span><select class="sttled2_category"></select></li>
+                              <li>&nbsp;</li>
+  <!--
+                              <li><span>营业执照号</span><input class="settleds_Number" type="text" placeholder="营业执照号"></li>
+  -->
+                              <li><span>企业法人</span><input type="text" class="tenantName" placeholder="法人姓名"></li>
+                              <li><span>所属行业</span>
+                                  <select  class="sttled2_hangye">
+                                      <option>网站</option>
+                                      <option>移动APP</option>
+                                      <option>IT与软件开发</option>
+                                      <option>新闻媒体</option>
+                                      <option>通讯社交</option>
+                                      <option>电子商务</option>
+                                      <option>游戏</option>
+                                      <option>音视频</option>
+                                      <option>金融</option>
+                                      <option>教育</option>
+                                      <option>医疗健康</option>
+                                      <option>旅游</option>
+                                      <option>物联网</option>
+                                      <option>汽车业/车联网</option>
+                                      <option>O2O</option>
+                                      <option>电力/新能源</option>
+                                      <option>交通运输</option>
+                                      <option>生产制造</option>
+                                      <option>建筑/地铁</option>
+                                      <option>政府/事业单位</option>
+                                      <option>新零售业/烟草业</option>
+                                      <option>基因</option>
+                                      <option>物流邮政</option>
+                                      <option>运营商</option>
+                                      <option>能源重工</option>
+                                      <option>公共事业/城市服务</option>
+                                      <option>教育</option>
+                                  </select>
+                              </li>
+                              <li><span>所在地</span><input class="settled2_address" type="text" placeholder="企业所在城市"></li>
+                              <li><span>企业官网</span><input class="companySite" type="text" value="http://"></li>
+                              <li><span>企业邮箱</span><input type="text" class="settled_email" placeholder="企业邮箱"></li>
+                              <li>&nbsp;</li>
+                              <li><span>企业联系人</span><input class="tenant_contactname" type="text" placeholder="姓名"></li>
+                              <li>&nbsp;</li>
+                              <li><span>联系人电话</span><input type="text" maxlength="11" class="settled_phone" placeholder="手机号"></li>
+                              <li><span>联系人邮箱</span><input type="text" class="tenant_email" placeholder="邮箱"></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sttled2_row">
+                      <h3>认证信息<i></i></h3>
+                      <div class="sttled2_left">&nbsp;</div>
+                      <div class="sttled2_right">
+                          <ul>
+
+                              <li><span>营业执照号码</span><input class="settleds_Number" type="text" placeholder="营业执照号码"></li>
+                              <li><span>组织机构代码</span><input class="settleds_ZzNumber" type="text" placeholder="组织机构代码"></li>
+                              <li class="sttled2_imgli">
+                                  <span>营业执照</span>
+                                  <div class="sttled2_imgup ">
+                                      <div class="up1"></div>
+                                      <div class="upi upi1">
+                                          <i class="cl cl-plus"></i>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="sttled2_imgli">
+                                  <span>公章</span>
+                                  <div class="sttled2_imgup ">
+                                      <div class="up2"></div>
+                                      <div class="upi upi2">
+                                          <i class="cl cl-plus"></i>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="sttled2_imgli">
+                                  <span>授权委托书</span>
+                                  <div class="sttled2_imgup ">
+                                      <div class="up3"></div>
+                                      <div class="upi upi3">
+                                          <i class="cl cl-plus"></i>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="sttled2_imgli">
+                                  <span>法人身份证复印件</span>
+                                  <div class="sttled2_imgup ">
+                                      <div class="up4"></div>
+                                      <div class="upi upi4">
+                                          <i class="cl cl-plus"></i>
+                                      </div>
+                                  </div>
+                              </li>
+
+
+
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sttled2_row">
+                      <h3>发票信息<i></i></h3>
+                      <div class="sttled2_left">&nbsp;</div>
+                      <div class="sttled2_right">
+                          <ul>
+                              <li><span>发票类型</span>
+                                  <select class="settled2_fapiao">
+                                      <option value="2">普通发票</option>
+                                      <option value="3">增值税专用发票</option>
+                                  </select>
+                              </li>
+                              <li>&nbsp;</li>
+                              <li><span>公司企业抬头</span><input class="tenant_Fullname" type="text"></li>
+                              <li>&nbsp;</li>
+                              <li><span>税务登记号</span><input class="settled2_sw" type="text" placeholder="税务登记号"></li>
+                              <li><span>基本开户名</span><input class="bank_username" type="text" placeholder="开户名"></li>
+                              <li><span>基本开户账号</span><input class="bank_name" type="text" placeholder="xxx"></li>
+                              <li><span>基本开户银行</span><input class="bank_branchname" type="text" placeholder="xxx"></li>
+                              <li><span>注册固定电话</span><input class="register_phone" type="text" placeholder="xxx"></li>
+                              <li><span>注册所在地</span><input class="register_address" type="text" placeholder="xxx"></li>
+
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="sttled2_row">
+                      <h3>邮寄信息<i></i></h3>
+                      <div class="sttled2_left">&nbsp;</div>
+                      <div class="sttled2_right">
+                          <ul>
+                              <li><span>收件人</span><input class="send_Name" type="text" placeholder="姓名"></li>
+                              <li>&nbsp;</li>
+                              <li><span>联系电话</span><input class="send_phone" type="text" class="settled_phone" placeholder="xxxx"></li>
+                              <li>&nbsp;</li>
+                              <li><span>详细地址</span><input class="send_address" type="text" placeholder="地址具体到门牌号"></li>
+
+                          </ul>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>
+
+  <!--we: 内容区域  -->
+
+
+
+<!-- ws:引入公共footer -->
+{{{include '../widget/footer_fix'}}}
+<!-- we:引入公共footer -->
+
+<!--ws: 公共Script -->
+{{{include '../widget/public_script'}}}
+<!--we: 公共Script -->
+
+
+<script>
+  require( ['PCASClass','settled'], function(PCAS) {
+      //new PCAS("P1","C1","Q1");
+  });
+</script>
+
+
+</body>
+</html>
