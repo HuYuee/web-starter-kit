@@ -4,11 +4,7 @@ var gulp = require('gulp'),
     browsersync = require('browser-sync').create(),
     imagemin = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
-    concat = require('gulp-concat'),
-    del = require('del'),
     uglify = require('gulp-uglify'),
-    replace = require('gulp-replace'),
-    pathLess = require('path'),
     less = require('gulp-less'),
     renderFun = require('./bin/render.js');
 
@@ -80,6 +76,7 @@ var lessCompile = function(lessPath, cssFolder) {
             browsersync.reload();
         })
 }
+/* 转换less成css */
 gulp.task('less', function() {
     lessCompile(path.less, path.cssfolder);
 })
@@ -87,16 +84,12 @@ gulp.task('less', function() {
 /*output dist/css*/
 var cssOut = function(cssPath, cssOutPath) {
     return gulp.src(cssPath)
-        // .pipe(sourcemaps.init())
         .pipe(cleancss({
             compatibility: 'ie8'
         }))
-        // .pipe(rename({
-        //     suffix: '.min'
-        // }))
-        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(cssOutPath))
 }
+/* 转移src下的css到dist，并压缩 */
 gulp.task('css', ['less'], function() {
     cssOut(path.css, path.cssout)
 })
@@ -105,13 +98,9 @@ gulp.task('css', ['less'], function() {
 var scriptOut = function(jsPath, jsOutPath) {
     return gulp.src(jsPath)
         .pipe(uglify())
-        // .pipe(sourcemaps.init())
-        // .pipe(rename({
-        //     suffix: '.min'
-        // }))
-        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(jsOutPath))
 }
+/* 转移src下的script到dist，并压缩 */
 gulp.task('script', function() {
     scriptOut(path.js, path.jsout)
 })
@@ -122,28 +111,28 @@ var imagesOut = function(imagePath, imageOutPath) {
         .pipe(imagemin())
         .pipe(gulp.dest(imageOutPath))
 }
+/* 转移src下的image到dist，并压缩 */
 gulp.task('images', function() {
     imagesOut(path.image, path.imageout);
 })
 
-
-/* output vendor*/
 var vendorOut = function(vendorPath, vendorOutPath) {
     return gulp.src(vendorPath)
         .pipe(gulp.dest(vendorOutPath))
 }
+/* 转移src下的vendor到dist */
 gulp.task('vendor', function() {
     vendorOut(path.vendor, path.vendorout)
 })
+/* 转移src下的conf到dist */
 gulp.task('conf', function() {
     vendorOut(path.conf, path.confout)
 })
 
-/* liveload */
+/* 起服务，并监听各个资源，一旦有改动，就自动刷新页面 */
 gulp.task('live', ['less', 'render'], function() {
     browsersync.init({
         port: 3333,
-        // startPath:'./src',
         server: {
             baseDir: './',
             index: 'src/html/index.html',
@@ -155,10 +144,9 @@ gulp.task('live', ['less', 'render'], function() {
     gulp.watch(path.html).on('change', browsersync.reload)
 })
 
-/*delete dist directory*/
-gulp.task('del', function() {
-    del(path.dist);
-});
-gulp.task('output', ['html', 'css', 'script', 'images', 'public', 'vendor', 'conf'])
+gulp.task('output', ['html', 'css', 'script', 'images', 'vendor', 'conf'])
+//最终产出
+gulp.task('dist', ['output'])
+
+//启动服务
 gulp.task('default', ['live']);
-gulp.task('cdn', ['output'])

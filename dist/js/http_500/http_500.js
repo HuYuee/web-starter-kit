@@ -1,1 +1,0 @@
-define(["jquery","util","template"],function(t,i,e){t("body").css("visibility","visible");var n={count:10,setValue:function(){this.count<=0?window.location.href=t("#500-link").attr("href"):(t("#500-count").html(this.count+"秒"),this.count--),setTimeout(function(){n.setValue()},1e3)}};t(function(){n.setValue()})});

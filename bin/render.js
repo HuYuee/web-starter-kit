@@ -2,8 +2,8 @@ var fs = require("fs");
 var fse = require("fs-extra");
 var path = require("path");
 var template = require("art-template");
-//details页面模板引擎
 
+//解析layout中的模板html，将完整的html产出到src/html中
 var renderFun = function() {
     /**
      * 模板引擎设置项：
@@ -23,35 +23,19 @@ var renderFun = function() {
     var rootDir = path.join(env, middlePath);
     if (fs.existsSync(rootDir)) {
         var pageList = fs.readdirSync(rootDir);
+
+        //遍历layout文件夹
         pageList.forEach(function(page) {
             var isHtml = /html$/.test(page);
             if (isHtml) {
                 var data = {};
-                var htmlPath = path.join(rootDir, page).replace(/\.html$/, "");
-                //加载对应json数据
-                var jsonDataPath = (htmlPath + ".json").replace(
-                    "layout",
-                    "layout-data"
-                );
-                //找到存在的json作为数据注入前端使用{{{title}}}
-                fs.exists(jsonDataPath, function(exists) {
-                    var pageList = fse.readJson(jsonDataPath, function(err,jsonobj) {
-                        if (jsonobj != undefined) {
-                            data = jsonobj;
-                        } else {
-                            data = {};
-                        }
-                        var htmlRender = template(htmlPath, data);
-                        var outFilePath = path.join(env, outPath, page);
-                        fse.outputFile(
-                            outFilePath,
-                            htmlRender,
-                            "utf-8",
-                            function() {
-                                console.log(outFilePath, "渲染完毕");
-                            }
-                        );
-                    });
+                var htmlPath = path.join(rootDir, page).replace(/\.html$/,'');
+                //加载对应html模板
+                var htmlRender = template(htmlPath, data);
+                var outFilePath = path.join(env, outPath, page);
+                //将生成的htmlRender写入/src/html文件夹中的相应的html中
+                fse.outputFile(outFilePath, htmlRender, "utf-8", function() {
+                    console.log(outFilePath, "渲染完毕");
                 });
             }
         });

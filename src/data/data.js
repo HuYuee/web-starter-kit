@@ -1,5 +1,5 @@
 define(["mock"], function(Mock) {
-    // 首页&列表页 - 获取所有产品及价格信息
+    //模拟请求数据
     Mock.mock("/user/getInfo", {
         status: 1,
         data: {
