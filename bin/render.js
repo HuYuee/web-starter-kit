@@ -3,7 +3,6 @@ var fse = require("fs-extra");
 var path = require("path");
 var template = require("art-template");
 //details页面模板引擎
-var artRender = require("./artRender.js");
 
 var renderFun = function() {
     /**
@@ -27,7 +26,7 @@ var renderFun = function() {
         pageList.forEach(function(page) {
             var isHtml = /html$/.test(page);
             if (isHtml) {
-                var data = {}; //{"title":"测试标题","content":"这里是一段文字说明"};
+                var data = {};
                 var htmlPath = path.join(rootDir, page).replace(/\.html$/, "");
                 //加载对应json数据
                 var jsonDataPath = (htmlPath + ".json").replace(
@@ -36,10 +35,7 @@ var renderFun = function() {
                 );
                 //找到存在的json作为数据注入前端使用{{{title}}}
                 fs.exists(jsonDataPath, function(exists) {
-                    var pageList = fse.readJson(jsonDataPath, function(
-                        err,
-                        jsonobj
-                    ) {
+                    var pageList = fse.readJson(jsonDataPath, function(err,jsonobj) {
                         if (jsonobj != undefined) {
                             data = jsonobj;
                         } else {
@@ -60,7 +56,6 @@ var renderFun = function() {
             }
         });
     }
-    artRender();
 };
 
 module.exports = renderFun;

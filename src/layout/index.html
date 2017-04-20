@@ -8,187 +8,20 @@
 </head>
 
 <body style="visibility:hidden;">
-    <!--ws:公共头部导航-->
-    {{{include '../widget/header'}}}
     <!-- ws : 内容区域-->
-    <div class="index">
-        <!-- ws: banner广告-->
-        <div class="banner" style="overflow:hidden">
-            <div>
-                <a href="./details.html">
-                    <img class="slider__banner-img" src="../images/index/banner1.jpg">
-                </a>
-            </div>
-            <div>
-                <a href="./details.html">
-                    <img class="slider__banner-img" src="../images/index/banner1.jpg">
-                </a>
-            </div>
-        </div>
-
-        <!-- we: introduce 菜市场使用介绍-->
-        <!--ws: recommend 推荐-->
-        <div class="recommend container">
-            <!--s:recommend-item-->
-            <div class="recommend__item" style="background-image: url(../images/index/ad/adbg1.jpg);">
-                <!-- http://www.yonyouhr.com/ -->
-                <a target="_blank" href="javascript:void(0)">
-                    <div class="pure-g">
-                        <div class="pure-u-1-2 recommend__item__img">
-                            <img src="../images/index/ad/ad1.png" />
-                        </div>
-                        <div class="recommend__item__content">
-                            <span>友人才</span>
-                            <p>创造人力资本新123123价值</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--e:recommend-item-->
-            <!--s:recommend-item-->
-            <div class="recommend__item " style="background-image: url(../images/index/ad/adbg2.jpg);">
-                <!-- https://mcloud.yonyou.com/market/ -->
-                <a target="_blank" href="javascript:void(0)">
-                    <div class="pure-g">
-                        <div class="pure-u-1-2 recommend__item__img">
-                            <img src="../images/index/ad/ad2.png" />
-                        </div>
-                        <div class="recommend__item__content">
-                            <span>友报账</span>
-                            <p>企业互联网财务入口</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--e:recommend-item-->
-            <!--s:recommend-item-->
-            <div class="recommend__item " style="background-image: url(../images/index/ad/adbg3.jpg);">
-               <!-- https://mcloud.yonyou.com/market/ -->
-                <a target="_blank" href="javascript:void(0)">
-                    <div class="pure-g">
-                        <div class="pure-u-1-2 recommend__item__img">
-                            <img src="../images/index/ad/ad3.png" />
-                        </div>
-                        <div class="recommend__item__content">
-                            <span>友云才</span>
-                            <p>采购决策和高效协调</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--e:recommend-item-->
-            <!--s:recommend-item-->
-            <div class="recommend__item " style="background-image: url(../images/index/ad/adbg4.jpg);">
-                <!-- https://mcloud.yonyou.com/market/ -->
-                <a target="_blank" href="javascript:void(0)">
-                    <div class="pure-g">
-                        <div class="pure-u-1-2 recommend__item__img">
-                            <img src="../images/index/ad/ad4.png" />
-                        </div>
-                        <div class="recommend__item__content">
-                            <span>友空间</span>
-                            <p>社交化业务平台</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--e:recommend-item-->
-        </div>
-        <!--we: recommend 推荐-->
-        <!-- ws:  数据列表 取代之前的财务、社交协同等 -->
-        <div class="datalist" id="datalist">
-            <script id="dataListAll" type="text/html">
-                {{each data as array index}} {{product1 = array.productList[0];}}
-                <div class="cloud-app container ">
-                    <div class="cloud-app__head">
-                        <div class="cloud-app__head--left">
-                            <h3>{{product1.productType}}</h3>
-                        </div>
-                        <div class="cloud-app__head--right">
-                            <ul class="nav nav-tabs" role="tablist" id="navTab{{index}}">
-                                <li role="presentation" class="active"><a href="#first{{index}}">移动办公</a></li>
-                                <li role="presentation"><a href="#second{{index}}">社交协同</a></li>
-                                <li role="presentation"><a href="./list.html">查看全部</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cloud-app__body">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="first{{index}}">
-                                {{each array.productList as product}}
-                                <div class="cloud-app__item hvr-grow-shadow">
-                                    <a target="_blank" href="./details.html?id={{product.productId}}">
-                                        <div class="cloud-app-wrap ">
-                                            <div class="cloud-app__item&#45;&#45;img">
-                                                <img src="{{product.logo}}" />
-                                            </div>
-                                            <div class="cloud-app__item&#45;&#45;name">
-                                                <span>{{product.productName}}</span>
-                                            </div>
-                                            <div class="cloud-app__item-detial">
-                                                <p>{{product.brief}}</p>
-                                            </div>
-                                            <div class="cloud-app__item-price">
-                                                {{if ( product.lowestPrice !=null) }}
-                                                <span class="priceColor">{{product.lowestPrice}}</span>
-                                                {{/if}}
-                                                {{if ( product.lowestPrice ==null) }}
-                                                <span class="priceColor">0</span>
-                                                {{/if}}
-                                                <i>/月</i>
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                {{/each}}
-                            </div>
-                            <div class="tab-pane " id="second{{index}}">
-                                <div class="cloud-app__item">
-                                    <a target="_blank" href="./details.html">
-                                        <div class="cloud-app-wrap">
-                                            <div class="cloud-app__item--img">
-                                                <img src='../images/index/app/app5.png' />
-                                            </div>
-                                            <div class="cloud-app__item--name">
-                                                <span>超客营销</span>
-                                            </div>
-                                            <div class="cloud-app__item-detial">
-                                                <p>链接我的客户</p>
-                                            </div>
-                                            <div class="cloud-app__item-price">
-                                                <span>$</span>
-                                                <span>980</span>
-                                                <span>年31312</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </script>
-        </div>
-        <!-- we:  数据列表 取代之前的财务、社交协同等 -->
-        <!-- ws: advertisement广告 -->
-        <div class="advertisement container">
-            <img src="../images/index/footbanner.jpg" />
-        </div>
-
-        <!-- we: advertisement广告 -->
+    <div>
+        <h1>
+            dfsdfsdfd123123123123
+        </h1>
     </div>
     <!-- we : 内容区域-->
 
-    <!-- ws:引入公共footer -->
-    {{{include '../widget/footer_fix'}}}
-    <!-- we:引入公共footer -->
 
     <!--ws: 公共Script -->
     {{{include '../widget/public_script'}}}
     <!--we: 公共Script -->
     <script>
+    //通过require的方式来引入需要的js
       require( ['index'], function() {
       });
     </script>
