@@ -6,13 +6,9 @@ require.config({
         template: "vendor/artTemplate/template",
         mock: "vendor/mockjs/mock.min",
         data: "data/data",
-        util: "public/js/util",
         index: "js/index/index"
     },
     shim: {
-        util: {
-            deps: ["data"]
-        },
         data: {
             deps: ["mock"]
         },
