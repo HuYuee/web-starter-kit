@@ -133,9 +133,9 @@ gulp.task('conf', function() {
 gulp.task('live', ['less', 'render'], function() {
     browsersync.init({
         port: 3333,
+        startPath:'./src/html/index.html',//默认打开的初始地址，可以不加
         server: {
             baseDir: './',
-            index: 'src/html/index.html',
             directory: true
         }
     })
