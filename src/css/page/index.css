@@ -2,6 +2,9 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+img {
+  width: 100px;
+}
 div h1 {
   font-size: 20px;
 }
@@ -9,4 +12,4 @@ div p {
   font-size: 14px;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0NBQ2Q7QUFDRDtFQUNFLGdCQUFnQjtDQUNqQjtBQUNEO0VBQ0UsZ0JBQWdCO0NBQ2pCIiwiZmlsZSI6InBhZ2UvaW5kZXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1heC13aWR0aDogMTIwMHB4O1xuICBtYXJnaW46IGF1dG87XG59XG5kaXYgaDEge1xuICBmb250LXNpemU6IDIwcHg7XG59XG5kaXYgcCB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cbiJdfQ== */
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0NBQ2Q7QUFDRDtFQUNFLGFBQWE7Q0FDZDtBQUNEO0VBQ0UsZ0JBQWdCO0NBQ2pCO0FBQ0Q7RUFDRSxnQkFBZ0I7Q0FDakIiLCJmaWxlIjoicGFnZS9pbmRleC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgbWF4LXdpZHRoOiAxMjAwcHg7XG4gIG1hcmdpbjogYXV0bztcbn1cbmltZyB7XG4gIHdpZHRoOiAxMDBweDtcbn1cbmRpdiBoMSB7XG4gIGZvbnQtc2l6ZTogMjBweDtcbn1cbmRpdiBwIHtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuIl19 */
