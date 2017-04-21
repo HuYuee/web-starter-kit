@@ -45,7 +45,7 @@
    $ cd web-starter-kit && npm install
    ```
 
-3. 启动页面
+3. 启动页面，访问[http://localhost:3333/src/html/index.html](http://localhost:3333/src/html/index.html)
 
    ```
    $ npm run start
