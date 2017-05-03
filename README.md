@@ -1,5 +1,5 @@
 # web-starter-kit
-一个基于require+gulp的前后端分离的脚手架工具
+一个基于require+gulp+less的前后端分离的脚手架工具
 
 # 目录结构
 
@@ -8,13 +8,13 @@
 - dist——生成出来的最终工程结构
 - src
   - conf——配置文件目录
-  - css——由less文件产出的css文件
+  - css——由less文件生成的的css文件
   - data——mock数据文件夹
   - html——由layout中的html文件解析出来的最终html文件
   - images——图片文件夹
-  - js——js文件夹
-  - layout——html的源文件夹
-  - less——less文件夹
+  - js——js文件夹（js相关在此文件夹中开发）
+  - layout——html的源文件夹（html在该文件夹中开发）
+  - less——less文件夹（样式相关的在该文件夹中开发）
   - vendor——第三方库
   - widget——公用的html模板
 

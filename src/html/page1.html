@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ws: 引入公共样式 -->
+    <title>title</title>
+<meta charset="utf-8">
+
+    <!-- we: 引入公共样式 -->
+</head>
+<body style="visibility:hidden;">
+    <h1>这里是page1的内容</h1>
+    <a href="index.html">点击回首页</a>
+    <!--ws: 公共Script -->
+    <script src="../vendor/require/require.min.js"></script>
+<script src="../conf/require.config.js"></script>
+
+    <!--we: 公共Script -->
+    <script>
+    //通过require的方式来引入需要的js
+      require( ['page1'], function() {
+      });
+    </script>
+</body>
+
+</html>
