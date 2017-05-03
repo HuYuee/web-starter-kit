@@ -116,6 +116,7 @@
 4. 配置require
 
    在`src/conf/require.config.js`中配置新加入的js和css，如下图所示：
+   ![image.png](http://upload-images.jianshu.io/upload_images/5099107-b044576b1680ebfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 5. 当然如果你再别的方面还需要进行增加或者修改可以到相应的目录下去修改，比如图片在images中修改，第三方插件在vendor中加入。
 
