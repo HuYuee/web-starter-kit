@@ -5,16 +5,16 @@
 
 - bin
   - render.js——(在gulpfile文件中使用到)解析layout中的模板html，将完整的html产出到src/html中
-- dist——生成出来的最终工程结构
-- src
+- dist——**产出目录（在项目下运行npm run build就可以将src下相关资源产出到该目录）**
+- src——**开发目录（只需在该目录下开发即可）**
   - conf——配置文件目录
   - css——由less文件生成的的css文件
   - data——mock数据文件夹
   - html——由layout中的html文件解析出来的最终html文件
   - images——图片文件夹
-  - js——js文件夹（js相关在此文件夹中开发）
-  - layout——html的源文件夹（html在该文件夹中开发）
-  - less——less文件夹（样式相关的在该文件夹中开发）
+  - js——js文件夹（**js相关在此文件夹中开发**）
+  - layout——html的源文件夹（**html在该文件夹中开发**）
+  - less——less文件夹（**样式相关的在该文件夹中开发**）
   - vendor——第三方库
   - widget——公用的html模板
 
@@ -57,4 +57,66 @@
    $ npm run build
    ```
 
-   ​
+
+
+
+# 如何新建页面
+
+1. 新建html
+
+   在`src/layout`文件夹中新建`page1.html`,在代码可以引入部门公用html模板，也可以写自己定制的代码。**这里需要明确的说一点：在html中的底部会加入require引入，这里必须要写入页面在require中对应的配置名称，比如下面的page1**。如果只是测试可以拷入以下代码：
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <!-- ws: 引入公共样式 -->
+       {{{include '../widget/public_style'}}}
+       <!-- we: 引入公共样式 -->
+   </head>
+   <body style="visibility:hidden;">
+       <h1>这里是page1的内容</h1>
+       <a href="index.html">点击回首页</a>
+       <!--ws: 公共Script -->
+       {{{include '../widget/public_script'}}}
+       <!--we: 公共Script -->
+       <script>
+       //通过require的方式来引入需要的js
+         require( ['page1'], function() {
+         });
+       </script>
+   </body>
+   </html>
+   ```
+
+2. 新建样式文件
+
+   在`src/less/page`文件夹中新建`page1.less`，在代码中可以引入公共的less模板，也可以自己写。如果是测试可以拷入以下代码：
+
+   ```less
+   // 引入基本样式
+   @import '../widget/common.less';
+
+       h1 {
+           font-size: 25px;
+       }
+   ```
+
+3. 新建js文件
+
+   在`src/js`文件夹下新建`page1`文件夹，然后在`page1`文件夹下新建文件`page1.js`。里面可以通过require语法引入其他js。可以拷入以下代码进行测试：
+
+   ```js
+   define(["jquery", "data", "template"], function($, d, template) {
+       $("body").css("visibility", "visible");
+
+   });
+   ```
+
+4. 配置require
+
+   在`src/conf/require.config.js`中配置新加入的js和css，如下图所示：
+
+5. 当然如果你再别的方面还需要进行增加或者修改可以到相应的目录下去修改，比如图片在images中修改，第三方插件在vendor中加入。
+
+6. 最后你可以访问[http://localhost:3334/src/html/page1.html](http://localhost:3334/src/html/page1.html)
